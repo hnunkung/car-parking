@@ -1,0 +1,56 @@
+*{
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#fblink{
+    color: #fff;
+}
+
+#fblink:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+#fblink:visited{
+    color: #fff;
+}
+
+.card_control_mg{
+    margin-bottom: 1rem;
+}
+
+.tag{
+    position: absolute;
+    right: 0px;
+    margin: .25em;
+    padding: .25em;
+}
+
+.nav_logo{
+    width: 15em;
+    margin-right: .5em;   
+}
+
+footer{
+    background: #f2cb00;
+    width: 100%;
+    height: auto;
+    padding: 2em;
+}
+
+.bg-pink{
+    background: #ff8ac6;
+}
+
+.bg-sky{
+    background: #8ac1ff;
+}
+
+.bg-orange{
+    background: #F60;
+}
+
+.bg-blue{
+    background: #06F;
+}

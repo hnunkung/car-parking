@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>รวมทุกอย่างที่ต้องรู้เกี่ยวกับการใช้ชีวิตในมหาลัย - SmoIT'62 สโมสรนักศึกษา คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/logo/logo.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3">
+        <a href="../"><img src="../assets/logo/nav-thai.svg" class="nav_logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="../">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../#smoshop">SmoShop</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="../#document">Document</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../#list">List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- / Navbar -->
+
+<div id="app">
+    <div class="container mt-5">
+        <div class="alert alert-danger" role="alert" v-html="noti" v-for="noti in notification">{{ noti }}</div>
+    </div>
+
+    <!-- สจล -->
+    <div class="container">
+        <div class="jumbotron">
+            <h3 class="mb-3 bg-orange text-white text-center rounded p-2">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h3>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> ปฏิทินการศึกษา</h4>
+                <p>นักศึกษาสามารถตรวจสอบปฏิทินการศึกษาของสถาบันได้ที่นี่ <a href="http://www.reg.kmitl.ac.th/educalendar/index.php">http://www.reg.kmitl.ac.th/educalendar/index.php</a></p>
+            </div>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> การลงทะเบียนเรียน</h4>
+                <p>นักศึกษาเข้าสู่ระบบทาง <a href="http://www.reg.kmitl.ac.th">http://www.reg.kmitl.ac.th</a> ในวันที่เปิดให้ลงทะเบียนล่วงหน้าและลงทะเบียนจริง หากลงทะเบียนล่วงหน้าแล้ว ในวันลงทะเบียนจริงนักศึกษาต้องเข้ามายืนยันซ้ำอีกรอบ</p>
+            </div>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> การชำระค่าเทอม</h4>
+                <p>นักศึกษาฝากเงินในบัญชีธนาคารของสถาบัน ทางสถาบันจะหักค่าเทอมอัตโนมัติ (เนื่องจากมีค่าธรรมเนียมธนาคาร <b>ควรฝากเกินอย่างน้อย 10 บาท</b>)</p>
+            </div>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> การประเมินอาจารย์</h4>
+                <p>นึกศึกษาต้องเข้าไปประเมินอาจารย์ผ่านระบบ reg ของสถาบันภายในวันที่กำหนด หากนักศึกษาไม่ประเมินอาจารย์ สิ้นเทอมจะไม่สามารถตรวจสอบเกรดแต่ละรายวิชาได้ และต้องไปขอออกใบเกรดที่ตึกอธิการ (ค่าธรรมเนียม 50 บาท/ครั้ง)</p>
+            </div>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> การขอใบเสร็จรับเงิน</h4>
+                <p>นักศึกษาสามารถไปขอใบเสร็จค่าเทอมได้ฟรี ที่ตึกอธิการ ชั้น xx</p>
+            </div>
+        </div>
+    </div>
+    <!-- / สจล -->
+
+    <!-- ไอที -->
+    <div class="container">
+        <div class="jumbotron">
+            <h3 class="mb-3 bg-blue text-white text-center rounded p-2">คณะเทคโนโลยีสารสนเทศ</h3>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> ตรวจสอบตารางเรียนล่วงหน้า</h4>
+                <p>นักศึกษาเข้าไปตรวจสอบตารางเรียนล่วงหน้าผ่านทางเว็บไซต์นี้ <a href="http://www.reg.kmitl.ac.th/teachtable_v20/">http://www.reg.kmitl.ac.th/teachtable_v20/</a></p>
+            </div>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> การดรอป</h4>
+                <p>ก่อนดรอปแต่ละวิชา นักศึกษาควรเช็ควิชาที่ต้องใช้ต่อ หรือปรึกษาพี่ห้องฟ้าก่อนดรอปรายวิชา (ดรอปผ่านระบบ reg ของสถาบัน)</p>
+            </div>
+            <div class="alert alert-dark pt-4">
+                <h4><i class="fas fa-chevron-right"></i> การขอทุนต่าง ๆ</h4>
+                <p>นึกศึกษาสามารถสอบถามได้กับพี่ห้องฟ้า หรือติดตามข่าวสารผ่านกลุ่ม <a href="https://www.facebook.com/groups/518056414911867/">งานทะเบียนและประเมินผล IT</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- / ไอที -->
+
+    <footer>
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>คณะเทคโนโลยีสารสนเทศ
+                        <br>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                        <br>เลขที่ 1 ซอยฉลองกรุง 1 แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพฯ 10520
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>ช่องทางการติดต่อ</h5>
+                    <p class="text-white">
+                        <i class="fab fa-facebook-square"></i> <a href="https://www.facebook.com/SMOstudentitkmitl/" id="fblink">สโมสรนักศึกษา คณะเทคโนโลยีสารสนเทศ พระจอมเกล้าลาดกระบัง</a>
+                        <br>
+                        <i class="fas fa-paper-plane"></i> ห้องตั้งอยู่บริเวณโรงอาหารคณะไอที ชั้น 2
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../file.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
